@@ -5,25 +5,64 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/style-popup.css">
   <title>GitBank</title>
 </head>
 <body>
-  <div class="principal">
-    <header>
-      <h1>GitBank</h1>
+
+  <header class="header">
       <img id = "logo"; src="./images/logo.png" alt="Bank's logotype">
-    </header>
+      <h1>GitBank</h1>
+      <button id="register">ABRA A SUA CONTA</button>
+  </header>
+
+  <main class="main">
+    <p>1</p>
+  </main>
+
+
+
+  <div class="popup-wrapper">
+    <div class="popup">
+      <div class="popup-close">x</div>
+      
+      <div class="popup-content">
+        <form class="form" id="form">
+          <h3>Abra já a sua conta bancária</h3>
+          
+          <div class="inputs">
+            <input type="text" name="name" id="name" placeholder="Nome">
+            <input type="text" name="cpf" id="cpf" placeholder="CPF">
+            <input type="text" name="phone" id="phone" placeholder="Celular">
+            <input type="password" name="password" id="password" placeholder="Senha">
+            <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Confirmar Senha">
+          </div>
+          <div class="submit">
+            <button type="reset">Limpar</button>
+            <button type="submit">Cadastrar</button>
+          </div>
+
+        </form>
+      </div>
+      </div>
+    </div>
   </div>
 
-  <div class="footnote">
+
+  <div class="footer">
     <img id = "instagram"; src="./images/instagram-logo.png" alt="">
     <img id = "twitter"; src="./images/twitter-logo.png" alt="">
 
-    GitBank Pagamentos S.A - Instituição Bancária - CNPJ 24.423.123/0001-52 <br>
-    Av das Americas, 250 - 04204-023 - São Paulo - SP <br>
-    Desenvolvido por GitBank®
+    <p>
+      GitBank Pagamentos S.A - Instituição Bancária - CNPJ 24.423.123/0001-52 <br>
+      Av das Americas, 250 - 04204-023 - São Paulo - SP <br>
+      Desenvolvido por GitBank®
+    </p>
+
+    <img id = "instagram"; src="./images/instagram-logo.png" alt="">
+    <img id = "twitter"; src="./images/twitter-logo.png" alt="">
   </div>
 
 </body>
-<script src="./apps/app.js"></script>
+<script src="./apps/pop-up.js"></script>
 </html>
