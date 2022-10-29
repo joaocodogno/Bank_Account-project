@@ -6,18 +6,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/style-popup.css">
+  <script src="./apps/app.js" async></script>
+  <script src="./apps/pop-up.js" async></script>
   <title>GitBank</title>
 </head>
 <body>
 
   <header class="header">
+    <div class="options">
       <img id = "logo"; src="./images/logo.png" alt="Bank's logotype">
-      <h1>GitBank</h1>
+      <a href="">Página Inícial</a>
+      <a href="">Consultar saldo</a>
+      <a href="">Depositar</a>
+      <a href="">Sacar</a>
+    </div>
+    <div>
       <button id="register">ABRA A SUA CONTA</button>
+    </div>
   </header>
 
   <main class="main">
-    <p>1</p>
+    <div class="informations">
+      <h2 class="title">Conta do GitBank</h2>
+      <p class="text">Abre já sua conta e conquiste sua independência financeira. Tudo pelo app com poucos cliques</p>
+    </div>
+    <img id="app-exemple" src="https://nubank.com.br/images-cms/1649356374-nuconta-inclined-device-3x.png?w=1152&dpr=1&auto=compress&fm=webp" alt="examplo do app gitbank">
+    <!-- <section class="section">
+      <h2>Ações</h2>
+  
+      <form id="form-acoes" class="">
+        <div>
+          <label for="operacao">Operação</label>
+          <select id="operacao" required>
+            <option value="SAQUE">Saque</option>
+            <option value="DEPOSITO">Depósito</option>
+            <option value="SALDO">Consulta Saldo</option>
+          </select>
+        </div>
+  
+        <div>
+          <label for="valor">Valor</label>
+          <input id="valor">
+        </div>
+  
+        <div>
+          <label for="conta">Conta</label>
+          <input id="conta" type="number" required>
+        </div>
+  
+        <div>
+          <label for="senha">Senha</label>
+          <input id="senha" required>
+        </div>
+        
+        <div>
+          <button type="reset" class="button">Limpar</button>
+          <button type="submit" class="button">Confirmar</button>
+        </div>
+  
+      </form>
+    </section> -->
   </main>
 
 
@@ -28,18 +76,18 @@
       
       <div class="popup-content">
         <form class="form" id="form">
-          <h3>Abra já a sua conta bancária</h3>
+          <h3>Abra já a sua conta no GitBank</h3>
           
           <div class="inputs">
-            <input type="text" name="name" id="name" placeholder="Nome">
-            <input type="text" name="cpf" id="cpf" placeholder="CPF">
-            <input type="text" name="phone" id="phone" placeholder="Celular">
-            <input type="password" name="password" id="password" placeholder="Senha">
-            <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Confirmar Senha">
+            <input class="input" type="text" name="name" id="name" placeholder="Nome">
+            <input class="input" type="text" name="cpf" id="cpf" placeholder="CPF">
+            <input class="input" type="text" name="phone" id="phone" placeholder="Celular">
+            <input class="input" type="password" name="password" id="password" placeholder="Senha">
+            <input class="input" type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Confirmar Senha">
           </div>
           <div class="submit">
-            <button type="reset">Limpar</button>
-            <button type="submit">Cadastrar</button>
+            <button id="form-reset" type="reset">Limpar</button>
+            <button id="form-submit" class="popup-confirm" type="submit">Cadastrar</button>
           </div>
 
         </form>
@@ -49,6 +97,11 @@
   </div>
 
 
+  
+
+
+
+
   <div class="footer">
     <img id = "instagram"; src="./images/instagram-logo.png" alt="">
     <img id = "twitter"; src="./images/twitter-logo.png" alt="">
@@ -56,13 +109,12 @@
     <p>
       GitBank Pagamentos S.A - Instituição Bancária - CNPJ 24.423.123/0001-52 <br>
       Av das Americas, 250 - 04204-023 - São Paulo - SP <br>
-      Desenvolvido por GitBank®
+      Desenvolvido por JoaoCodogno®
     </p>
 
-    <img id = "instagram"; src="./images/instagram-logo.png" alt="">
-    <img id = "twitter"; src="./images/twitter-logo.png" alt="">
+    <img id = "linkedin" src="./images/linkedin-logo.png" alt="linkedin logo">
+    <img id= "facebook" src="./images/facebook-logo.png" alt="facebook logo">
   </div>
 
 </body>
-<script src="./apps/pop-up.js"></script>
 </html>
