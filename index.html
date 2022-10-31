@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/style-popup.css">
+  <link rel="stylesheet" href="styles/style-operations.css">
   <script src="./apps/app.js" async></script>
   <script src="./apps/pop-up.js" async></script>
   <title>GitBank</title>
@@ -26,11 +27,59 @@
   </header>
 
   <main class="main">
-    <div class="informations">
-      <h2 class="title">Conta do GitBank</h2>
-      <p class="text">Abre já sua conta e conquiste sua independência financeira. Tudo pelo app com poucos cliques</p>
+    
+    <div  class ="page1">
+      <div class="informationsPage1">
+        <h2 class="title">Conta do GitBank</h2>
+        <p class="text">Abre já sua conta e conquiste sua independência financeira. Tudo pelo app com poucos cliques.</p>
+      </div>
+      <img id="app-exemple" src="https://nubank.com.br/images-cms/1649356374-nuconta-inclined-device-3x.png?w=1152&dpr=1&auto=compress&fm=webp" alt="examplo do app gitbank">
     </div>
-    <img id="app-exemple" src="https://nubank.com.br/images-cms/1649356374-nuconta-inclined-device-3x.png?w=1152&dpr=1&auto=compress&fm=webp" alt="examplo do app gitbank">
+    
+    <div class="page2">
+      <div class="informationsPage2">
+        <h2 class="title">Realize suas operações</h2>
+        <p class="text">Escolha a opção ao lado para depósito, saque ou consulta de saldo.</p>
+      </div>
+
+      
+      <div class="operationsPage2">
+        <div class="title-operations">
+          <div class="deposit">
+            <h2>Realizar Depósito</h2>
+          </div>
+        
+          <div class="draw">
+            <h2>Realizar Saque</h2>
+          </div>
+          
+          <div class="balance">
+            <h2>Consultar</h2>
+          </div>
+        </div>
+  
+        <div class = "popup-operations">
+          <form class = "form-operations">
+            <div class="inputs-operations">
+              <label for="account">Número da sua conta:</label>
+              <input id="account" type="number" required>
+      
+              <label for="amount">Valor desejado:</label>
+              <input id="amount">
+      
+              <label for="password">Digite sua senha:</label>
+              <input id="password-operations" required>
+            </div>
+            <div class="submit-operations">
+              <button id="form-reset-operations" type="reset">Limpar</button>
+              <button id="form-submit-operations" class="popup-confirm" type="submit">Confirmar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+     
+    
     <!-- <section class="section">
       <h2>Ações</h2>
   
@@ -98,10 +147,6 @@
 
 
   
-
-
-
-
   <div class="footer">
     <img id = "instagram"; src="./images/instagram-logo.png" alt="">
     <img id = "twitter"; src="./images/twitter-logo.png" alt="">

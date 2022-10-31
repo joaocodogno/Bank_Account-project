@@ -34,12 +34,9 @@ form.addEventListener('submit', cadastrarConta);
 
 
 
-
-
-
 // Funções operações
 
-// const trocarOperacao = (event) => {
+// ===const trocarOperacao = (event) => {
 //   const valor = document.getElementById('valor')
 //   valor.disabled = event.target.value === 'SALDO'
 // }
