@@ -34,53 +34,71 @@ form.addEventListener('submit', cadastrarConta);
 
 
 
-// Funções operações
+// FUNÇÕES OPERAÇÕES
 
-// ===const trocarOperacao = (event) => {
-//   const valor = document.getElementById('valor')
-//   valor.disabled = event.target.value === 'SALDO'
-// }
+// desabilita o campo valor
+const changeOperation = (event) => {
+  const amount = document.getElementById('amount')
+  amount.disabled = event.target.value === 'BALANCE'
+}
 
-// const sacar = () => {}
-// const depositar = () => {}
-// const consultarSaldo = () => {}
+const obterConta = (account) => {
+  const accountClient = accountsClients.find((a) => a.accountNumber === account)
+  return accountClient
+}
 
-// const validarConta = (conta, senha) => {
-//   const contaCliente = accountsClients.find((c) => c.account === conta)
-//   contaCliente && contaCliente.senha === senha ? true : false
+const sacar = () => {
 
-// }
+}
 
-
-// const efetuarOperacao = (event) => {
-//   event.preventDefault()
-
-//   if(validarConta(parseInt(evento.target.account.value)))
-
-//   switch(event.target.operacao.value) {
-//     case 'SAQUE':
-//       sacar();
-//       break;
-//     case 'DEPOSITO':
-//       sacar();
-//       break;
-//     case 'SALDO':
-//       consultarSaldo();
-//       break;
-//     default:
-//       alert('Operação Inválida')
-//   }
-// }
+const depositar = () => {}
 
 
-// const operacao = document.getElementById('operacao')
-// operacao.addEventListener('change', trocarOperacao)
-
-// const efetuarOperacao = document.getElementById('form-acoes')
-// operacao.addEventListener('submit', efetuarOperacao)
-
+const consultarSaldo = (account) => {
+  const accountClient = obterConta(account)
+  alert (`Seu saldo é: ${accountClient.amount}`)
+}
 
 
+const validarConta = (account, password) => {
+  const accountClient = obterConta(account)
+  return accountClient && accountClient.password === password ? true : false
+}
+
+
+const efetuarOperacao = (event) => {
+  event.preventDefault()
+  const account = parseInt(event.target.accountOperations.value)
+  const password = event.target.passwordOperations.value
+
+  const contaValida = validarConta(account, password)
+
+  console.log(contaValida)
+  if(contaValida) {
+    console.log('sou feliz')
+    //   case 'WITHDRAW':
+    //     sacar();
+    //     break;
+    //   case 'DEPOSIT':
+    //     depositar();
+    //     break;
+    //   case 'BALANCE':
+    //     consultarSaldo(account);
+    //     break;
+    //   default:
+    //     alert('Operação Inválida')
+    // }
+  } else {
+    alert ('Conta ou senha inválida')
+  }
+}
+
+
+const operation = document.getElementById('operation')
+operation.addEventListener('change', changeOperation)
+
+const formOperations = document.getElementById('form-operations')
+formOperations.addEventListener('submit', efetuarOperacao)
 
 
 
@@ -90,3 +108,19 @@ form.addEventListener('submit', cadastrarConta);
 
 
 
+
+
+
+ // switch (event.target.operation.value) {
+    //   case 'WITHDRAW':
+    //     sacar();
+    //     break;
+    //   case 'DEPOSIT':
+    //     depositar();
+    //     break;
+    //   case 'BALANCE':
+    //     consultarSaldo(account);
+    //     break;
+    //   default:
+    //     alert('Operação Inválida')
+    // }

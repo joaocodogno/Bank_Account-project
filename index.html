@@ -44,31 +44,35 @@
 
       
       <div class="operationsPage2">
-        <div class="title-operations">
+        <select id="operation" required>
+          <option value="WITHDRAW">Saque</option>
+          <option value="DEPOSIT">Depósito</option>
+          <option value="BALANCE">Consulta Saldo</option>
+        </select>
+        <!-- <div class="title-operations">
           <div class="deposit">
-            <h2>Realizar Depósito</h2>
+            <h2 id="operation">Realizar Depósito</h2>
           </div>
         
           <div class="draw">
-            <h2>Realizar Saque</h2>
+            <h2 id="operation">Realizar Saque</h2>
           </div>
           
           <div class="balance">
-            <h2>Consultar</h2>
-          </div>
-        </div>
+            <h2 id="operation">Consultar</h2>
+          </div> -->
   
         <div class = "popup-operations">
-          <form class = "form-operations">
+          <form id = "form-operations" class = "form-operations">
             <div class="inputs-operations">
               <label for="account">Número da sua conta:</label>
-              <input id="account" type="number" required>
+              <input id="accountOperations" type="number" required>
       
               <label for="amount">Valor desejado:</label>
-              <input id="amount">
+              <input id="amount" type="number">
       
               <label for="password">Digite sua senha:</label>
-              <input id="password-operations" required>
+              <input id="passwordOperations" required>
             </div>
             <div class="submit-operations">
               <button id="form-reset-operations" type="reset">Limpar</button>

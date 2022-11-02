@@ -139,7 +139,7 @@ button#register:hover {
 
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   flex: 1;
 }
@@ -171,7 +171,8 @@ button#register:hover {
   margin-right: 20px;
 
   height: 100%;
-  width: 100%;
+  min-width: 800px;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
 }
