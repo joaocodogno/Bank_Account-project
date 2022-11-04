@@ -44,11 +44,7 @@
 
       
       <div class="operationsPage2">
-        <select id="operation" required>
-          <option value="WITHDRAW">Saque</option>
-          <option value="DEPOSIT">Depósito</option>
-          <option value="BALANCE">Consulta Saldo</option>
-        </select>
+        
         <!-- <div class="title-operations">
           <div class="deposit">
             <h2 id="operation">Realizar Depósito</h2>
@@ -64,6 +60,13 @@
   
         <div class = "popup-operations">
           <form id = "form-operations" class = "form-operations">
+
+            <select id="operation" required>
+              <option value="WITHDRAW">Saque</option>
+              <option value="DEPOSIT">Depósito</option>
+              <option value="BALANCE">Consulta Saldo</option>
+            </select>
+            
             <div class="inputs-operations">
               <label for="account">Número da sua conta:</label>
               <input id="accountOperations" type="number" required>
